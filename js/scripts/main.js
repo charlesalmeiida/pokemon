@@ -39,6 +39,12 @@ function openDetailsPokemon() {
   const heightPokemonModal = document.getElementById("js-height-pokemon")
   const weightPokemonModal = document.getElementById("js-weight-pokemon")
   const mainAbilitiesModal = document.getElementById("js-main-abilities")
+  const btnMoreAbilites = document.getElementById("js-show-more-abilities")
+  const moreAbilitieName = document.getElementById("js-more-abilitie-name")
+  const moreAbilitieTwoName = document.getElementById(
+    "js-more-abilitie-two-name"
+  )
+  const modalAbilities = document.getElementById("js-modal-abilities")
 
   imagePokemonModal.setAttribute("src", imagePokemon.getAttribute("src"))
   modalDetails.setAttribute("type-pokemon-modal", this.classList[1])
@@ -61,6 +67,50 @@ function openDetailsPokemon() {
       stats: data.stats,
       urlType: data.types[0].type.url,
     }
+    moreAbilitieName.textContent = ""
+    moreAbilitieTwoName.textContent = ""
+
+    function showMoreAbilities() {
+      infoPokemon.abilities.forEach((abilitie, index, array) => {
+        console.log(array)
+        if (uppercase(array[0].ability.name) === infoPokemon.mainAbilities) {
+          moreAbilitieName.textContent = `${uppercase(array[1].ability.name)}`
+          moreAbilitieTwoName.textContent = `${uppercase(
+            array[2].ability.name
+          )}`
+        }
+      })
+    }
+
+    let typePokemon = infoPokemon.types[0].type.name
+
+    btnMoreAbilites.classList = `tag-abilities btn-${typePokemon}`
+
+    function clearTypeClasses() {
+      modalAbilities.classList.forEach((className) => {
+        if (className.startsWith("type-")) {
+          modalAbilities.classList.remove(className)
+        }
+      })
+    }
+
+    btnMoreAbilites.addEventListener("mouseover", () => {
+      clearTypeClasses() //]
+      modalAbilities.classList.add("active", `type-${typePokemon}`)
+      showMoreAbilities()
+    })
+
+    // Adiciona a classe relevante ao modal quando o mouse passa sobre o botão
+    btnMoreAbilites.addEventListener("mouseover", () => {
+      clearTypeClasses() // Limpa as classes "type-" existentes no modal
+      modalAbilities.classList.add(`type-${typePokemon}`)
+    })
+
+    // Remove a classe relevante do modal quando o mouse deixa o botão
+    btnMoreAbilites.addEventListener("mouseleave", () => {
+      modalAbilities.classList.remove("active", `type-${typePokemon}`)
+    })
+
     function listingTypesPokenon() {
       let arrayTypes = infoPokemon.types
       const areaTypesModal = document.getElementById("js-types-pokemon")
