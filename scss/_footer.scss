@@ -1,9 +1,9 @@
 footer {
   width: 100%;
-  background-color: var(--blue-primary);
+  background-color: $blue-primary;
   padding-top: 6.7rem;
   padding-bottom: 6.5rem;
-  .container{
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,7 +19,7 @@ footer {
       color: rgba(255, 255, 255, 0.8);
     }
   }
-  @media(max-width: 560px) {
+  @media (max-width: 560px) {
     padding: 4rem 0;
     .container {
       flex-direction: column;

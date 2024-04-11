@@ -89,27 +89,27 @@
   }
   &.all {
     span {
-      color: var(--blue-primary);
+      color: $blue-primary;
     }
   }
   &.ghost {
     span {
-      color: var(--type-ghost);
+      color: $type-ghost;
     }
   }
   &.bug {
     span {
-      color: var(--type-bug);
+      color: $type-bug;
     }
   }
   &.dark {
     span {
-      color: var(--type-dark);
+      color: $type-dark;
     }
   }
   &.dragon {
     span {
-      color: var(--type-dragon);
+      color: $type-dragon;
     }
   }
   &.electric {
@@ -119,67 +119,67 @@
   }
   &.fairy {
     span {
-      color: var(--type-fairy);
+      color: $type-fairy;
     }
   }
   &.fighting {
     span {
-      color: var(--type-fighting);
+      color: $type-fighting;
     }
   }
   &.ground {
     span {
-      color: var(--type-ground);
+      color: $type-ground;
     }
   }
   &.ice {
     span {
-      color: var(--type-ice);
+      color: $type-ice;
     }
   }
   &.normal {
     span {
-      color: var(--type-normal);
+      color: $type-normal;
     }
   }
   &.poison {
     span {
-      color: var(--type-poison);
+      color: $type-poison;
     }
   }
   &.psychic {
     span {
-      color: var(--type-psychic);
+      color: $type-psychic;
     }
   }
   &.rock {
     span {
-      color: var(--type-rock);
+      color: $type-rock;
     }
   }
   &.grass {
     span {
-      color: var(--type-grass);
+      color: $type-grass;
     }
   }
   &.steel {
     span {
-      color: var(--type-steel);
+      color: $type-steel;
     }
   }
   &.water {
     span {
-      color: var(--type-water);
+      color: $type-water;
     }
   }
   &.fire {
     span {
-      color: var(--type-fire);
+      color: $type-fire;
     }
   }
   &.flying {
     span {
-      color: var(--type-flying);
+      color: $type-flying;
     }
   }
 }
@@ -379,75 +379,75 @@
   letter-spacing: -0.01em;
   font-family: "Montserrat", sans-serif;
   &.bug {
-    color: var(--type-bug);
+    color: $type-bug;
     background-color: rgba(156, 186, 72, 0.1);
   }
   &.dark {
-    color: var(--type-dark);
+    color: $type-dark;
     background-color: rgba(89, 87, 97, 0.1);
   }
   &.dragon {
-    color: var(--type-dragon);
+    color: $type-dragon;
     background-color: rgba(44, 106, 193, 0.1);
   }
   &.electric {
-    color: var(--type-electric);
+    color: $type-electric;
     background-color: rgba(212, 188, 52, 0.1);
   }
   &.fairy {
-    color: var(--type-fairy);
+    color: $type-fairy;
     background-color: rgba(226, 150, 225, 0.1);
   }
   &.fighting {
-    color: var(--type-fighting);
+    color: $type-fighting;
     background-color: rgba(196, 77, 97, 0.1);
   }
   &.ground {
-    color: var(--type-ground);
+    color: $type-ground;
     background-color: rgba(206, 128, 86, 0.1);
   }
   &.ice {
-    color: var(--type-ice);
+    color: $type-ice;
     background-color: rgba(113, 186, 171, 0.1);
   }
   &.normal {
-    color: var(--type-normal);
+    color: $type-normal;
     background-color: rgba(144, 144, 144, 0.1);
   }
   &.poison {
-    color: var(--type-poison);
+    color: $type-poison;
     background-color: rgba(172, 106, 202, 0.1);
   }
   &.psychic {
-    color: var(--type-psychic);
+    color: $type-psychic;
     background-color: rgba(235, 140, 133, 0.1);
   }
   &.rock {
-    color: var(--type-rock);
+    color: $type-rock;
     background-color: rgba(132, 190, 179, 0.1);
   }
   &.ghost {
-    color: var(--type-ghost);
+    color: $type-ghost;
     background-color: rgba(97, 110, 183, 0.1);
   }
   &.grass {
-    color: var(--type-grass);
+    color: $type-grass;
     background-color: rgba(114, 184, 97, 0.1);
   }
   &.steel {
-    color: var(--type-steel);
+    color: $type-steel;
     background-color: rgba(101, 148, 161, 0.1);
   }
   &.water {
-    color: var(--type-water);
+    color: $type-water;
     background-color: rgba(79, 120, 190, 0.1);
   }
   &.fire {
-    color: var(--type-fire);
+    color: $type-fire;
     background-color: rgba(233, 99, 3, 0.1);
   }
   &.flying {
-    color: var(--type-flying);
+    color: $type-flying;
     background-color: rgba(117, 140, 189, 0.1);
   }
 }
@@ -460,7 +460,7 @@
   font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: -0.01em;
-  color: var(--blue-primary);
+  color: $blue-primary;
   transition: all 0.3s;
   &:hover {
     background-color: $blue-primary;
